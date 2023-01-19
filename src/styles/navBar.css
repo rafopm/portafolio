@@ -1,0 +1,12 @@
+.active{
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s linear;
+  z-index: 9;
+  /* padding: 0 7%; */
+}
+
+.hidden{
+  top: -80px;
+}
