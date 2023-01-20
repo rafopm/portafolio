@@ -4,7 +4,6 @@ import BtnSlider from "./BtnSlider";
 import dataSlider from "./dataSlider";
 
 export default function Slider() {
-  const length = dataSlider.length;
   const slideshow = useRef(null);
   const timeout = useRef(null);
 
@@ -27,7 +26,6 @@ export default function Slider() {
   };
 
   useEffect(() => {
-
     timeout.current = setTimeout(nextSlide, 4000);
 
     slideshow.current.addEventListener("mouseenter", () => {
@@ -47,7 +45,6 @@ export default function Slider() {
 
   return (
     <div className="container-slider" ref={slideshow}>
-
       {dataSlider.map((obj, index) => {
         return (
           <>
@@ -57,10 +54,10 @@ export default function Slider() {
                 slideIndex === index + 1 ? "slide active-anim" : "slide"
               }
             >
-              <img src={require(`../Slider/img/${obj.image}.jpg`)} />
-              {/* <img 
-                        src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`} 
-                        /> */}
+              <img
+                key={obj.id}
+                src={require(`../Slider/img/${obj.image}.jpg`)}
+              />
             </div>
           </>
         );
