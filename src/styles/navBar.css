@@ -1,4 +1,4 @@
-.active{
+.active {
   width: 100%;
   position: fixed;
   top: 0px;
@@ -7,6 +7,13 @@
   /* padding: 0 7%; */
 }
 
-.hidden{
-  top: -80px;
+.hidden {
+  top: -100px;
+}
+
+.nombreAutor {
+  color: aliceblue;
+  padding-right: 30px;
+  font-size: 30px;
+  font-family: "Great Vibes", cursive;
 }

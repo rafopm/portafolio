@@ -15,7 +15,10 @@ const Slider = () => {
       clearTimeout(timeout.current);
     }
     setCurrent(current === length - 1 ? 0 : current + 1);
-
+    slideshow.current.children[current].style.transition = "opacity .5s";
+    slideshow.current.children[current].style.transition = `${velocidad}ms ease-out all`;
+    console.log(slideshow.current.children[current].style)
+    
   };
 
   const prevSlide = () => {
@@ -27,9 +30,7 @@ const Slider = () => {
   };
 
   useEffect(() => {
-    const nextSlide = () => {
-      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
-    };
+
 
     timeout.current = setTimeout(nextSlide, 4000);
  
@@ -46,7 +47,7 @@ const Slider = () => {
         clearTimeout(timeout.current);
       }
     };
-  }, [current]);
+  }, [current, slideshow]);
 
   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
     return null;

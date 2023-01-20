@@ -1,29 +1,41 @@
-import { useEffect, useState } from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import '../styles/navBar.css'
+import { useEffect, useState, useRef } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Styled from "styled-components";
+import "../styles/navBar.css";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
+  const [position, setPosition] = useState(0);
+  const divRef = useRef();
 
   useEffect(() => {
-    let posicion = 0;
-    window.addEventListener('scroll', function (e) {
-      posicion = window.pageYOffset;
-      if (posicion === 0) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
+    const div = divRef.current;
+
+    window.addEventListener("scroll", function (e) {
+      setPosition(window.pageYOffset);
     });
-  }, []);
+
+    if (position === 0) {
+      div.style.top = "-100px";
+    } else {
+      div.style.top = "0px";
+    }
+  }, [position]);
 
   return (
-    <Navbar className={`active ${show && 'hidden'}`} collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      ref={divRef}
+      className={`active ${show && "hidden"}`}
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+    >
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Nav.Link href="#home"><div className="nombreAutor">Rafael Pampavilca</div></Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

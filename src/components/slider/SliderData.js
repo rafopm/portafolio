@@ -1,15 +1,15 @@
 const SliderData = [
     {
       title: "Slide 1",
-      image: "code-slider-one"
+      image: "slider-01"
     },
     {
       title: "Slide 2",
-      image: "code-slider-two"
+      image: "slider-02"
     },
     {
       title: "Slide 3",
-      image: "code-slider-three"
+      image: "slider-03"
     }
   ];
 

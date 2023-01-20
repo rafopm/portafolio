@@ -6,12 +6,12 @@
   margin-top: 0px;
   z-index: 1;
   overflow:hidden;
-  
+  background-color: #333333;
 }
 /* 
 .slideSection:hover img {-webkit-transform:scale(1.3);transform:scale(1.3);} */
 
-.slideSection:hover img {filter: grayscale(80%);}
+.slideSection:hover img {filter: saturate(180%);}
 
 .slideItem {
   position: absolute;
@@ -36,8 +36,10 @@
 }
 
 .slideItem img {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 1024px;
+  object-fit: cover;
+  object-position: center;
 }
 
 

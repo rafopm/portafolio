@@ -13,7 +13,7 @@ import PaymentsPage from "../pages/PaymentsPage";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import CategoriesRouter from "./CategoriesRouter";
-import Slider from "../components/slider/Slider";
+import Slider from "../Slider/Slider";
 
 function AppRouter() {
   return (
