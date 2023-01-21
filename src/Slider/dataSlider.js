@@ -3,21 +3,24 @@ import { v4 as uuidv4 } from "uuid";
 const dataSlider = [
   {
     id: uuidv4(),
-    title: "Lorem ipsum 1",
-    subTitle: "Lorem",
-    image: "slider-01"
+    title: "¡ Hola !",
+    subTitle: "Gracias por pasar por aquí.",
+    image: "slider-04",
+    subimage: "hello"
   },
   {
     id: uuidv4(),
-    title: "Lorem ipsum w",
-    subTitle: "Lorem",
-    image: "slider-02"
+    title: "Soy Rafael",
+    subTitle: "Me gusta el desarrollo web",
+    image: "slider-02",
+    subimage: "adventure"
   },
   {
     id: uuidv4(),
-    title: "Lorem ipsum 3",
-    subTitle: "Lorem",
-    image: "slider-03"
+    title: "Hagamos sinergia",
+    subTitle: "Contáctame para hacer sinergia",
+    image: "slider-03",
+    subimage: "help"
   },
  
 ];

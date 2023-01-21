@@ -8,8 +8,6 @@
   overflow:hidden;
   background-color: #333333;
 }
-/* 
-.slideSection:hover img {-webkit-transform:scale(1.3);transform:scale(1.3);} */
 
 .slideSection:hover img {filter: saturate(180%);}
 
@@ -18,14 +16,10 @@
   top: 0;
   left: 0;
   height: 100vh;
-  
-
   width: 100vw;
   flex-shrink: 0;
   
 }
-
-
 
 .slideItem h1 {
   position: absolute;
@@ -41,8 +35,6 @@
   object-fit: cover;
   object-position: center;
 }
-
-
 
 .sliderButtons {
   position: absolute;

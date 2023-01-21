@@ -1,0 +1,9 @@
+:root {
+    --color-contraste: #00CFEF;
+    --color-fondo: #222222;
+  }
+
+.aplication{
+    background-color: var(--color-fondo);
+
+}

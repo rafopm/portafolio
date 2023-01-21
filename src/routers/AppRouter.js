@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ProfilePage from "../pages/ProfilePage";
 import "../styles/navBar.css";
+
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import DashboardPage from "../pages/DashboardPage";
@@ -14,18 +15,17 @@ import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import CategoriesRouter from "./CategoriesRouter";
 import Slider from "../Slider/Slider";
+import TextoEffect from "../Slider/TextoEffect";
 
 function AppRouter() {
   return (
-    <>
-      <NavBar />
-      <Slider />
-      <ContactPage />
-      <AboutPage />
+    <div className="aplication">
+
+
       <ContactPage />
       <DashboardPage />
       
-     </> 
+     </div> 
   );
 }
 

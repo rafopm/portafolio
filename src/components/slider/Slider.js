@@ -31,7 +31,6 @@ const Slider = () => {
 
   useEffect(() => {
 
-
     timeout.current = setTimeout(nextSlide, 4000);
  
     slideshow.current.addEventListener('mouseenter', () => {

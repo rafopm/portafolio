@@ -1,18 +1,21 @@
-import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AppRouter from "./routers/AppRouter";
-import AuthProvider from "./auth/AuthProvider";
+import './App.css'
+import NavBar from "./routers/NavBar";
+import Slider from "./Slider/Slider";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from './pages/ContactPage';
+import DashboardPage from './pages/DashboardPage';
+
 
 function App() {
-  return(
-<div>
-  <AuthProvider>
-    <AppRouter />
-    </AuthProvider>
-  </div>
-
-  )
+  return (
+    <div>
+      <NavBar />
+      <Slider />
+      <AboutPage />
+      <ContactPage />
+      <DashboardPage />
+    </div>
+  );
 }
 
 export default App;
-

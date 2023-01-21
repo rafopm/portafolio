@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Slider.css";
 import BtnSlider from "./BtnSlider";
 import dataSlider from "./dataSlider";
+import TextoEffect from "./TextoEffect";
 
 export default function Slider() {
   const slideshow = useRef(null);
@@ -45,26 +46,16 @@ export default function Slider() {
 
   return (
     <div className="container-slider" ref={slideshow}>
-      {dataSlider.map((obj, index) => {
-        return (
-          <>
-            <div
-              key={obj.id}
-              className={
-                slideIndex === index + 1 ? "slide active-anim" : "slide"
-              }
-            >
-              <img
-                key={obj.id}
-                src={require(`../Slider/img/${obj.image}.jpg`)}
-              />
-            </div>
-          </>
-        );
-      })}
 
-      <h1 className="sliderTitle">{dataSlider[slideIndex - 1].title}</h1>
-      <h1 className="sliderSubTitle">{dataSlider[slideIndex - 1].subTitle}</h1>
+      <TextoEffect value={dataSlider[slideIndex - 1].title}></TextoEffect>
+
+        <img className="imageSlider"
+          src={require(`../Slider/img/${dataSlider[slideIndex - 1].image}.jpg`)}
+        />
+        <img className="subImageSlider"
+          src={require(`../Slider/img/${dataSlider[slideIndex - 1].subimage}.svg`)}
+        />
+
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
     </div>
