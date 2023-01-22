@@ -1,10 +1,9 @@
-import './App.css'
+import "./App.css";
 import NavBar from "./routers/NavBar";
 import Slider from "./Slider/Slider";
 import AboutPage from "./pages/AboutPage";
-import ContactPage from './pages/ContactPage';
-import DashboardPage from './pages/DashboardPage';
-
+import DashboardPage from "./pages/DashboardPage";
+import ContactForm from "./form/ContactForm";
 
 function App() {
   return (
@@ -12,8 +11,7 @@ function App() {
       <NavBar />
       <Slider />
       <AboutPage />
-      <ContactPage />
-      <DashboardPage />
+      <ContactForm />
     </div>
   );
 }

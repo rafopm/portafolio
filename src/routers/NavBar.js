@@ -8,7 +8,6 @@ const NavBar = () => {
   const divRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(isOpen)
   useEffect(() => {
     const div = divRef.current;
 

@@ -54,6 +54,7 @@ export default function Slider() {
         />
         <img className="subImageSlider"
           src={require(`../Slider/img/${dataSlider[slideIndex - 1].subimage}.svg`)}
+          alt="Imágenes de bienvenida"
         />
 
       <BtnSlider moveSlide={nextSlide} direction={"next"} />

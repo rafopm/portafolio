@@ -18,7 +18,7 @@ const TextoEffect = ({ value }) => {
         setNewTexto(temporal);
         clearInterval(intervalo);
       } else {
-        if (arr[i] == " ") {
+        if (arr[i] === " ") {
           temporal += arr[i];
           setNewTexto(temporal);
           i++;

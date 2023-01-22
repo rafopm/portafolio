@@ -16,14 +16,15 @@ const TAGS = [
   "CSS",
   "JavaScript",
   "Typescript",
-  "Tailwind",
   "React",
-  "Next.js",
-  "Gatsby",
-  "UI/UX",
-  "SVG",
-  "animation",
-  "webdev",
+  "Redux",
+  "Illustrator",
+  "Corel Draw",
+  "Phoshopt",
+  "WordPress",
+  "Joomla",
+  "SQL",
+  "MySQL",
 ];
 const DURATION = 15000;
 const ROWS = 5;
@@ -34,13 +35,23 @@ const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
 function AboutPage() {
   return (
-    <div className="aboutContenedor">
-      <h1>Sobre mi</h1>
-      <div>
-        <div>
+    <div>
+      <div className="aboutContenedor">
+        <div className="aboutTitle">
+          <p>Acerca de mi</p>
+        </div>
+        <div className="aboutDescription">
           <p>
             Soy desarrollador de aplicaciones web. Me apasiona solucionar
             problemas y trabajar con datos.
+          </p>
+          <p>
+            Uso herramientas de diseño gráfico para dar color a las interfaces
+            de usuario y también para la impresión en gran formato y souvenirs.
+          </p>
+          <p>
+            También tengo amplia experiencia en redes y hardware de
+            computadoras.
           </p>
           <p>
             Soy una persona bien organizada, trabajo de forma independiente o en
@@ -51,7 +62,7 @@ function AboutPage() {
             diferente género.
           </p>
         </div>
-        <div>
+        <div className="aboutSlider">
           <div className="tag-list">
             {[...new Array(ROWS)].map((_, i) => (
               <InfiniteLoopSlider
@@ -71,6 +82,10 @@ function AboutPage() {
             <div className="fade" />
           </div>
         </div>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
       </div>
     </div>
   );
