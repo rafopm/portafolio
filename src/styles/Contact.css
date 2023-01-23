@@ -11,6 +11,13 @@
     
   }
 
+  .contactTitle{
+    font-size: 2em;
+    color: #00CFEF;
+    margin: 50px 0 0 5px;
+    margin-bottom: -30px;
+    }
+
   .contactDescription{
     grid-column-start: 1;
     grid-column-end: 1;
@@ -25,9 +32,66 @@
     font-size: 1.1em;
   }
 
-  .formImput{
-    width: 95%;
-    height: 30px;
+  .lLabel{
+    padding: 15px 0 5px 0;
+  }
 
+  .formImput{
+    width: 100%;
+    height: 30px;
    font-size: 0.9em;
   }
+
+  .formMensaje{
+    width: 100%;
+    height: 150px;
+   font-size: 1.2em;
+  }
+
+  .errorInput{
+    color: #00CFEF;
+    margin: 0px;
+  }
+
+  .captchaForm{
+    margin: 10px 0 10px 0;
+  }
+  
+ input[type=submit] {
+    background-color: #00CFEF;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 1em;
+
+    border-radius: 10px;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+
+  }
+
+@media screen and (max-width: 700px) {
+  .contactContenedor {
+    margin-left: 10px;
+  }
+
+  .contactDescription{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 20px;
+    
+  }
+  
+  .contactForm{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  
+  }
+
+  .contactTitle{
+    margin-left: 20px;
+
+    }
+}

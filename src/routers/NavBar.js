@@ -32,9 +32,9 @@ const NavBar = () => {
         <div className="nav_logo"> Rafael Pampavilca </div>
         <div className={`nav_items ${isOpen && "open"}`}>
           <a href="#"> INICIO</a>
-          <a href="#"> BIO</a>
+          <a href="#sobreMi" class="ocultar-visualmente2"> ACERCA DE MI</a>
           <a href="#"> PORTAFOLIO</a>
-          <a href="#"> CONTACTO</a>
+          <a href="#idContacto" class="ocultar-visualmente2"> CONTACTO</a>
         </div>
         <div
           className={`nav_toggle ${isOpen && "open"}`}

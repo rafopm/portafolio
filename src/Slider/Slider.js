@@ -45,20 +45,25 @@ export default function Slider() {
   }, [slideIndex, slideshow]);
 
   return (
-    <div className="container-slider" ref={slideshow}>
+    <>
+      <div className="container-slider" ref={slideshow}>
+        <TextoEffect value={dataSlider[slideIndex - 1].title}></TextoEffect>
 
-      <TextoEffect value={dataSlider[slideIndex - 1].title}></TextoEffect>
-
-        <img className="imageSlider"
+        <img
+          className="imageSlider"
           src={require(`../Slider/img/${dataSlider[slideIndex - 1].image}.jpg`)}
         />
-        <img className="subImageSlider"
-          src={require(`../Slider/img/${dataSlider[slideIndex - 1].subimage}.svg`)}
+        <img
+          className="subImageSlider"
+          src={require(`../Slider/img/${
+            dataSlider[slideIndex - 1].subimage
+          }.svg`)}
           alt="Imágenes de bienvenida"
         />
 
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-    </div>
+        <BtnSlider moveSlide={nextSlide} direction={"next"} />
+        <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+      </div>
+    </>
   );
 }

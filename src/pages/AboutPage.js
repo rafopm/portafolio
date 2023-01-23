@@ -19,8 +19,8 @@ const TAGS = [
   "React",
   "Redux",
   "Illustrator",
-  "Corel Draw",
-  "Phoshopt",
+  "CorelDraw",
+  "Photoshop",
   "WordPress",
   "Joomla",
   "SQL",
@@ -35,7 +35,7 @@ const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
 function AboutPage() {
   return (
-    <div>
+    <div id="sobreMi">
       <div className="aboutContenedor">
         <div className="aboutTitle">
           <p>Acerca de mi</p>
@@ -82,10 +82,7 @@ function AboutPage() {
             <div className="fade" />
           </div>
         </div>
-        <hr></hr>
-        <hr></hr>
-        <hr></hr>
-        <hr></hr>
+
       </div>
     </div>
   );
