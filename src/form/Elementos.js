@@ -27,7 +27,7 @@ const ColRedes = styled.div`
   grid-column-end: 1;
   margin: 5px;
   font-size: 1.1em;
-  
+
   @media (max-width: 800px) {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -50,12 +50,7 @@ const ColForm = styled.div`
   }
 `;
 
-const Formulario = styled.form`
-
-
-`;
-
-
+const Formulario = styled.form``;
 
 const Label = styled.label`
   display: block;
@@ -105,7 +100,42 @@ const Input = styled.input`
     css`
       border: 3px solid ${colores.error} !important;
     `}
+
 `;
+
+
+
+const InputArea = styled.textarea`
+  width: 90%;
+  background: #fff;
+  border-radius: 3px;
+  height: 200px;
+  line-height: 45px;
+  padding: 0 10px 0 10px;
+  transition: 0.3s ease all;
+  border: 3px solid transparent;
+  margin: auto;
+
+  &:focus {
+    border: 3px solid ${colores.borde};
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+  }
+
+  ${(props) =>
+    props.valido === "true" &&
+    css`
+      border: 3px solid transparent;
+    `}
+
+  ${(props) =>
+    props.valido === "false" &&
+    css`
+      border: 3px solid ${colores.error} !important;
+    `}
+
+`;
+
 
 const LeyendaError = styled.p`
   font-size: 12px;
@@ -225,4 +255,5 @@ export {
   ColRedes,
   ColForm,
   ContactTitle,
+  InputArea,
 };

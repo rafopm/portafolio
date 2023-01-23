@@ -2,8 +2,9 @@ import "./App.css";
 import NavBar from "./routers/NavBar";
 import Slider from "./Slider/Slider";
 import AboutPage from "./pages/AboutPage";
-import DashboardPage from "./pages/DashboardPage";
-import ContactForm from "./form/ContactForm";
+import ContactPage from "./pages/ContactPage";
+
+
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <NavBar />
       <Slider />
       <AboutPage />
-      <ContactForm />
+      <ContactPage />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   Formulario,
   Label,
@@ -14,17 +14,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import Input from "./Input";
+import InputArea from "./InputArea";
 import ContactImage from "../images/contact.svg"
 
 const ContactForm = () => {
-  const [usuario, cambiarUsuario] = useState({ campo: "", valido: null });
+  const [mensaje, cambiarMensaje] = useState({ campo: "", valido: null });
   const [nombre, cambiarNombre] = useState({ campo: "", valido: null });
   const [correo, cambiarCorreo] = useState({ campo: "", valido: null });
   const [telefono, cambiarTelefono] = useState({ campo: "", valido: null });
   const [formularioValido, cambiarFormularioValido] = useState(null);
 
+
   const expresiones = {
-    usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     password: /^.{4,12}$/, // 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -36,13 +37,13 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (
-      usuario.valido === "true" &&
+      mensaje.valido === "true" &&
       nombre.valido === "true" &&
       correo.valido === "true" &&
       telefono.valido === "true"
     ) {
       cambiarFormularioValido(true);
-      cambiarUsuario({ campo: "", valido: "" });
+      cambiarMensaje({ campo: "", valido: "" });
       cambiarNombre({ campo: "", valido: null });
       cambiarCorreo({ campo: "", valido: null });
       cambiarTelefono({ campo: "", valido: null });
@@ -67,7 +68,7 @@ const ContactForm = () => {
             tipo="text"
             label="Nombre"
             placeholder="John Doe"
-            name="usuario"
+            name="nombre"
             leyendaError="El nombre solo puede contener letras y espacios."
             expresionRegular={expresiones.nombre}
           />
@@ -92,10 +93,10 @@ const ContactForm = () => {
             expresionRegular={expresiones.telefono}
           />
 
-          <Input
-            
-            estado={usuario}
-            cambiarEstado={cambiarUsuario}
+          <InputArea
+   
+            estado={mensaje}
+            cambiarEstado={cambiarMensaje}
             tipo="textarea"
             label="Mensaje"
             placeholder="Escriba aquí"

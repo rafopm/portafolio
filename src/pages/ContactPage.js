@@ -1,122 +1,98 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useForm } from "react-hook-form";
 import "../styles/Contact.css";
+import emailjs from "@emailjs/browser";
 
-function ContactPage() {
+export default function ContactPage() {
+  const form = useRef();
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+
+  // const onSubmit = (data) => console.log(data);
+  // console.log(errors);
+
+  const sendEmail = (e) => {
+    console.log(e);
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fpabh0g",
+        "template_5bhppwm",
+        form.current,
+        "qhsJYavCYwCPl2lGZ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
-    <div>
-      <section className="contact-sec sec-pad">
-        <div className="contactContenedor">
-          <div className="contactDescription">
-            <div class="contact-detail">
-              <h1 class="section-title">Contact us</h1>
-
-              <ul class="contact-ul">
-                <li>
-                  <i class="fa fa-location-dot"></i> 91, Ram Nagar, Ram Mandir,
-                  Delhi
-                </li>
-
-                <li>
-                  <i class="fa fa-phone"></i>
-                  <a href="tel:08510004495">
-                    <b>0255000XXXX</b>
-                  </a>
-                  ,
-                  <a href="tel:08510005495">
-                    <b>0251600XXXX</b>
-                  </a>
-                </li>
-
-                <li>
-                  <i class="fa-solid fa-envelope"></i>
-                  <a href="mailto:pardeepkumar4bjp@gmail.com">
-                    <b> demounknown@gmail.com</b>
-                  </a>
-                </li>
-              </ul>
-
-              <span>
-                <a href="#" class="fb">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#" class="insta">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" class="twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-              </span>
-            </div>
+    <div className="contactContenedor">
+      <div className="contactDescription"></div>
+      <div className="contactForm">
+        {" "}
+        <form ref={form} onSubmit={sendEmail}>
+          <label className="lLabel" htmlFor="nombre">
+            <div>Nombre:</div>
+            <input
+              className="formImput"
+              id="nombre"
+              name="nombre"
+              type="text"
+              placeholder="Nombre"
+              {...register("Nombre", { required: true, maxLength: 80 })}
+              aria-invalid={errors.Nombre ? "true" : "false"}
+            />
+            {errors.Nombre?.type === "required" && (
+              <p role="alert">Nombre requerido</p>
+            )}
+          </label>
+          <label className="lLabel" htmlFor="email">
+            <div>Email:</div>
+            <input
+              className="formImput"
+              id="email"
+              name="email"
+              type="text"
+              placeholder="Email"
+              {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+            />
+          </label>
+          <label className="lLabel" htmlFor="telefono">
+            <div>Teléfono:</div>
+            <input
+              className="formImput"
+              id="telefono"
+              name="telefono"
+              type="number"
+              placeholder="Teléfono"
+              {...register("Teléfono", { required: true, maxLength: 18 })}
+            />
+          </label>
+          <label className="lLabel" htmlFor="mensaje">
+            <div>Mensaje:</div>
+            <textarea
+              className="formMensaje"
+              {...register("Mensaje", { required: true, maxLength: 200 })}
+            />
+          </label>
+          <div>
+            <input type="submit" />
           </div>
-
-          <div className="contactForm">
-            <form action="#" class="contFrm" method="POST">
-              <div class="row">
-                <div class="col-sm-6">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    class="inptFld"
-                    required
-                  />
-                </div>
-
-                <div class="col-sm-6">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    class="inptFld"
-                    required
-                  />
-                </div>
-
-                <div class="col-sm-6">
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    class="inptFld"
-                    required
-                  />
-                </div>
-
-                <div class="col-sm-6">
-                  <input
-                    type="text"
-                    name="sub"
-                    placeholder="Subject"
-                    class="inptFld"
-                    required
-                  />
-                </div>
-
-                <div class="col-12">
-                  <textarea
-                    class="inptFld"
-                    rows=""
-                    cols=""
-                    placeholder="Your Message..."
-                    required
-                  ></textarea>
-                </div>
-
-                <div class="col-12">
-                  <input
-                    type="submit"
-                    name="submit"
-                    value="SUBMIT"
-                    class="inptBtn"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+        </form>
+      </div>
     </div>
   );
 }
-
-export default ContactPage;
