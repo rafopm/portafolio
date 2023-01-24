@@ -1,0 +1,151 @@
+#portafolio {
+}
+
+.containerWork {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  user-select: none;
+}
+
+.workList {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  gap: 20px;
+}
+
+.work {
+  background: #3c3e44;
+  border-radius: 10px;
+}
+
+.workTitle {
+  font-size: 2em;
+  color: #00cfef;
+  margin: 50px 0 0 5px;
+}
+
+.work:hover {
+  box-shadow: 5px 10px 20px 1px rgba(73, 72, 72, 0.5) !important;
+  transition: all 0.7s linear;
+}
+
+.work-body {
+  padding: 2rem 0 !important;
+}
+
+.work-text {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+}
+
+.work-img-top {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.work-img-top:hover {
+  transform: scale(1.8);
+}
+
+.cardWork {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  max-width: 100%;
+  z-index: 1;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.card img {
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+  transition: all 0.6s ease;
+  width: 47%;
+  height: 100%;
+  z-index: 5;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cardWork:hover > .card img {
+  left: 48%;
+  transition: all 0.6s ease;
+}
+
+.cardInfo {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 50%;
+  transition: all 0.6s ease;
+}
+
+.cardAbout {
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  min-height: 300px;
+  max-height: 300px;
+  transition: all 0.6s ease;
+  padding: 0 20px 0 20px;
+}
+
+.cardInfoText {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0px;
+  row-gap: 0px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.cardInfoText a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #00cfef;
+}
+
+.cardInfoText h4 {
+  color: #00cfef;
+  margin-top: 0;
+}
+
+.cardInfoText p {
+  margin-bottom: 5px;
+}
+
+.titleCard {
+  left: 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .containerWork {
+    width: 100%;
+  }
+
+  .workList {
+    display: grid;
+    grid-template-columns: auto;
+    width: 95%;
+    margin: auto;
+    gap: 10px;
+  }
+}

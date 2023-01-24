@@ -28,13 +28,13 @@ const NavBar = () => {
       ref={divRef}
       className={`active ${show && "hidden"}`}
     >
-      <div className="navbar">
-        <div className="nav_logo"> Rafael Pampavilca </div>
+      <div className="navBar">
+        <div className="navLogo"> <a href="#"> Rafael Pampavilca</a> </div>
         <div className={`nav_items ${isOpen && "open"}`}>
           <a href="#"> INICIO</a>
-          <a href="#sobreMi" class="ocultar-visualmente2"> ACERCA DE MI</a>
-          <a href="#"> PORTAFOLIO</a>
-          <a href="#idContacto" class="ocultar-visualmente2"> CONTACTO</a>
+          <a href="#sobreMi" > ACERCA DE MI</a>
+          <a href="#portafolio" > PORTAFOLIO</a>
+          <a href="#idContacto" > CONTACTO</a>
         </div>
         <div
           className={`nav_toggle ${isOpen && "open"}`}

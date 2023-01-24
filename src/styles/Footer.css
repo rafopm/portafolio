@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(28, 28, 28);
+}
+
+.socialIcons {
+  padding-left: 0;
+  margin: 5px 10px 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  align-content: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.enlace {
+  text-decoration: none !important;
+  color: #00cfef !important;
+  margin-left: 5px;
+}
+
+.linkedin {
+  font-size: 40px;
+  color: #00cfef;
+}
+
+.linkedin:hover {
+    color:#0e76a8;
+  }
+
+.github {
+  font-size: 40px;
+  color: #00cfef;
+}
+
+.github:hover{
+    color:black;
+}
+
+.copyright{
+    margin-left: 15px;
+}
+
+@media (max-width: 767px) {
+}

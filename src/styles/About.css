@@ -9,6 +9,7 @@
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  user-select:none;
 }
 
 .aboutTitle{

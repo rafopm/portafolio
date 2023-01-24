@@ -12,6 +12,7 @@
 }
 
 .nombreAutor {
+  user-select:none;
   color: aliceblue;
   padding-right: 30px;
   font-size: 30px;
@@ -19,8 +20,9 @@
 }
 
 
-.navbar{
-  background: rgba(0,0,0,0.7);
+.navBar{
+  user-select:none;
+  background: rgba(0,0,0,0.9);
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -29,19 +31,27 @@
   -moz-transition: all .10s ease; 
   -o-transition: all .10s ease;
   transition: all .10s ease; 
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.9);
 }
-.nav_logo{
+.navLogo{
   font-weight: bold;
   font-size: 30px;
   margin: 15px;
   color: white;
   font-family: 'Dancing Script', cursive;
 }
-.nav_items a{
 
+.navLogo a{
+  text-decoration: none;
+  color: white;
+}
+
+.navLogo a:hover {
+  color: #00CFEF;
+}
+
+.nav_items a{
   padding: 15px;
-  
   color: white;
   position: relative;
   text-decoration: none;
@@ -51,8 +61,10 @@
   transition: all .10s ease;
 }
 
+
 .nav_items a:hover {
   background-color: rgba(255,255,255,0.1);
+  color: #00CFEF;
 }
 
 .nav_toggle{
