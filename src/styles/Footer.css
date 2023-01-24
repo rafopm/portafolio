@@ -28,19 +28,25 @@
 .linkedin {
   font-size: 40px;
   color: #00cfef;
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
 }
 
 .linkedin:hover {
     color:#0e76a8;
+    box-shadow: 0 4px 4px rgb(46, 55, 59);
+    transition: all 0.2s ease;
   }
 
 .github {
   font-size: 40px;
   color: #00cfef;
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
 }
 
 .github:hover{
     color:black;
+    box-shadow: 0 4px 2px rgb(46, 55, 59);
+    transition: all 0.2s ease;
 }
 
 .copyright{

@@ -4,12 +4,12 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const FooterPage = () => {
   return (
-    <div >
+    <div>
       <br />
       <br />
       <div className="container">
         <div className="copyright">
-          <p >
+          <p>
             Copyright &copy; 2023 All Rights Reserved by:
             <a className="enlace" href="#">
               Rafael Pampavilca
@@ -20,12 +20,22 @@ const FooterPage = () => {
         <div>
           <ul className="socialIcons">
             <li>
-              <a className="linkedin" href="#">
-                <FaLinkedin  />
+              <a
+                className="linkedin"
+                href="https://www.linkedin.com/in/rafael-pampavilca/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
               </a>
             </li>
             <li>
-              <a className="github" href="#">
+              <a
+                className="github"
+                href="https://github.com/rafopm"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithubSquare />
               </a>
             </li>
