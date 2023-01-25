@@ -39,12 +39,13 @@ function WorkList() {
   return (
     <div id="portafolio">
       <div>
-        <br /> <br />
+        <br /> 
       </div>
-      <div className="containerWork">
-        <div className="workTitle">
-          <p>Portafolio</p>
+      <div className="workTitle">
+          <p>PORTAFOLIO</p>
         </div>
+      <div className="containerWork">
+
         <div className="workList">
           {works.map(({ title, image, text, url, id, category, tools }) => (
             <div className="work" key={id}>

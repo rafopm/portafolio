@@ -10,7 +10,7 @@ const Divisor = () => {
         <code></code>
       </center>
       <hr />
-      <br />
+
     </div>
   );
 };

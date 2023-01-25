@@ -12,10 +12,21 @@
   }
 
   .contactTitle{
-    font-size: 2em;
-    color: #00CFEF;
-    margin: 50px 0 0 5px;
+    font-size: 2.5em;
+    margin: 10px 0 0 5px;
     margin-bottom: -30px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .contactTitle p {
+      color: #ffffff;
+      background-color: #00cfef;
+      padding: 0 10px;
+      font-family: 'Roboto', sans-serif;
     }
 
   .contactDescription{

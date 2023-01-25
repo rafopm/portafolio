@@ -36,53 +36,56 @@ const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 function AboutPage() {
   return (
     <div id="sobreMi">
-      <div className="aboutContenedor">
+      <br />
+      <div >
         <div className="aboutTitle">
-          <p>Acerca de mi</p>
+          <p> ACERCA DE MI </p>
         </div>
-        <div className="aboutDescription">
-          <p>
-            Soy desarrollador de aplicaciones web. Me apasiona solucionar
-            problemas y trabajar con datos.
-          </p>
-          <p>
-            Uso herramientas de diseño gráfico para dar color a las interfaces
-            de usuario y también para la impresión en gran formato y souvenirs.
-          </p>
-          <p>
-            También tengo amplia experiencia en redes y hardware de
-            computadoras.
-          </p>
-          <p>
-            Soy una persona bien organizada, trabajo de forma independiente o en
-            grupo.
-          </p>
-          <p>
-            Me gusta leer, ver películas históricas y escuchar música de
-            diferente género.
-          </p>
-        </div>
-        <div className="aboutSlider">
-          <div className="tag-list">
-            {[...new Array(ROWS)].map((_, i) => (
-              <InfiniteLoopSlider
-                key={i}
-                duration={random(DURATION - 5000, DURATION + 5000)}
-                reverse={i % 2}
-              >
-                {shuffle(TAGS)
-                  .slice(0, TAGS_PER_ROW)
-                  .map((tag) => (
-                    <div key={tag} className="tag">
-                      <span>#</span> {tag}
-                    </div>
-                  ))}
-              </InfiniteLoopSlider>
-            ))}
-            <div className="fade" />
+        <div className="aboutContenedor">
+          <div className="aboutDescription">
+            <p>
+              Soy desarrollador de aplicaciones web. Me apasiona solucionar
+              problemas y trabajar con datos.
+            </p>
+            <p>
+              Uso herramientas de diseño gráfico para dar color a las interfaces
+              de usuario y también para la impresión en gran formato y
+              souvenirs.
+            </p>
+            <p>
+              También tengo amplia experiencia en redes y hardware de
+              computadoras.
+            </p>
+            <p>
+              Soy una persona bien organizada, trabajo de forma independiente o
+              en grupo.
+            </p>
+            <p>
+              Me gusta leer, ver películas históricas y escuchar música de
+              diferente género.
+            </p>
+          </div>
+          <div className="aboutSlider">
+            <div className="tag-list">
+              {[...new Array(ROWS)].map((_, i) => (
+                <InfiniteLoopSlider
+                  key={i}
+                  duration={random(DURATION - 5000, DURATION + 5000)}
+                  reverse={i % 2}
+                >
+                  {shuffle(TAGS)
+                    .slice(0, TAGS_PER_ROW)
+                    .map((tag) => (
+                      <div key={tag} className="tag">
+                        <span>#</span> {tag}
+                      </div>
+                    ))}
+                </InfiniteLoopSlider>
+              ))}
+              <div className="fade" />
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   );
