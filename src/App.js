@@ -8,6 +8,7 @@ import FooterPage from "./pages/FooterPage";
 import Divisor from "./pages/Divisor";
 
 function App() {
+
   return (
     <div>
       <NavBar />

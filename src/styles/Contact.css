@@ -70,6 +70,12 @@
     background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
   }
 
+  input[type=submit]:disabled{
+    color: rgb(105, 103, 103) !important;
+    background-color: #222;
+    transition: all 0.2s ease;
+  }
+
   input[type=submit]:hover{
     color: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
@@ -78,7 +84,8 @@
 
 @media screen and (max-width: 700px) {
   .contactContenedor {
-    margin-left: 10px;
+    max-width: 95%;
+    margin: auto;
   }
 
   .contactDescription{

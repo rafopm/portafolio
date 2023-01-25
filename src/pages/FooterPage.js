@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Footer.css";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import Modal from "../components/modal/ModalCore";
 
 const FooterPage = () => {
+
   return (
     <div>
       <br />
@@ -16,7 +18,9 @@ const FooterPage = () => {
             </a>
           </p>
         </div>
-
+        <div>
+        
+        </div>
         <div>
           <ul className="socialIcons">
             <li>

@@ -6,12 +6,16 @@ import Reaptcha, { Props as ReaptchaProps } from "reaptcha";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import ContactImage from "../images/contact.svg"
+import Modal from "../components/modal/ModalCore";
 
 export default function ContactPage() {
   const form = useRef();
   const [verified, setVerified] = useState(false);
   //const captchaRef = useRef(null);
   const keyCaptcha = "6LeZhhskAAAAAIzvEKnESpLvWvuAwvRTgOv9bMm2";
+
+  //Estado de Modal
+  const [isOpen, setOpen] = useState(false);
 
   const onVerify = () => {
     setVerified(true);
@@ -37,6 +41,9 @@ export default function ContactPage() {
       .then(
         (result) => {
           console.log(result.text);
+
+          //Ventana modal
+          setOpen(true)
         },
         (error) => {
           console.log(error.text);
@@ -136,6 +143,12 @@ export default function ContactPage() {
           </div>
           <div className="">
             <input type="submit" disabled={!verified} />
+            <Modal isOpen={isOpen} close={() => setOpen(false)}>
+            <h2>¡Mensaje enviado!</h2>
+            <p>
+              Muchas gracias, en breve me comunicaré contigo.
+            </p>
+          </Modal>
           </div>
         </form>
       </div>
