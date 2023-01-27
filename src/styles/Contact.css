@@ -24,9 +24,10 @@
 
     .contactTitle p {
       color: #ffffff;
-      background-color: #00cfef;
       padding: 0 10px;
       font-family: 'Roboto', sans-serif;
+      border-top: 4px solid #ffffff;
+      border-bottom: 4px solid #ffffff;
     }
 
   .contactDescription{
@@ -39,24 +40,35 @@
   .contactForm{
     grid-column-start: 2;
     grid-column-end: 2;
-    margin: 5px;
+   width: 95%;
     font-size: 1.1em;
+    box-shadow: 0 4px 16px rgb(0, 0, 0);
   }
 
   .lLabel{
     padding: 15px 0 5px 0;
+    position: relative;
+    
+    width: 80%;
   }
 
   .formImput{
-    width: 100%;
+    position: relative;
+    width: 90%;
     height: 30px;
    font-size: 0.9em;
+   margin: auto;
+   left: 20px;
   }
 
   .formMensaje{
-    width: 100%;
+    position: relative;
+    width: 90%;
+
     height: 150px;
    font-size: 1.2em;
+   margin: auto;
+   left: 20px;
   }
 
   .errorInput{
@@ -65,6 +77,10 @@
   }
 
   .captchaForm{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    left: 20px;
     margin: 10px 0 10px 0;
   }
   
@@ -78,6 +94,8 @@
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
+    position: relative;
+    left: 20px;
     background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
   }
 
@@ -88,31 +106,34 @@
   }
 
   input[type=submit]:hover{
-    color: rgba(255, 255, 255, 1) !important;
-    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    color: rgb(95, 95, 95) !important;
+    box-shadow: 0 4px 16px rgb(0, 0, 0);
     transition: all 0.2s ease;
   }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .contactContenedor {
+    grid-template-columns: 1fr;
     max-width: 95%;
     margin: auto;
+    grid-column-gap: 10px;
   }
 
   .contactDescription{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 1;
     margin-left: 20px;
   }
   
   .contactForm{
+    position: relative;
     grid-column-start: 1;
-    grid-column-end: 2;
-  
+    grid-column-end: 1;
+    padding: 15px;
   }
 
   .contactTitle{
-    margin-left: 20px;
+    
 
     }
 }

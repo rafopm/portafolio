@@ -1,3 +1,6 @@
+#portafolio{
+  background-color: rgba(17, 17, 17, 0.400);
+}
 
 .containerWork {
   position: relative;
@@ -16,6 +19,7 @@
 .work {
   background: #3c3e44;
   border-radius: 10px;
+  box-shadow: 0 4px 16px rgb(0, 0, 0);
 }
 
 .workTitle {
@@ -31,9 +35,10 @@
 
 .workTitle p {
   color: #ffffff;
-  background-color: #00cfef;
   padding: 0 10px;
   font-family: 'Roboto', sans-serif;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
 }
 
 .work:hover {
@@ -146,9 +151,9 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .containerWork {
-    width: 100%;
+    width: 95%;
   }
 
   .workList {

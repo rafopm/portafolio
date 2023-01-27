@@ -24,16 +24,22 @@
  
 .aboutTitle p {
   color: #ffffff;
-  background-color: #00cfef;
   padding: 0 10px;
   font-family: 'Roboto', sans-serif;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
 }
 
+
 .aboutDescription {
+  position: relative;
   grid-column-start: 1;
   grid-column-end: 1;
   margin: 5px;
   font-size: 1.1em;
+  width: 95%;
+  text-overflow: unset;
+  margin: auto;
 }
 
 .aboutSlider {
@@ -104,16 +110,24 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  .aboutContenedor {
+    grid-template-columns: 1fr;
+   width: 95%;
+   margin: auto;
+
+  }
+
   .aboutDescription {
     grid-column-start: 1;
-    grid-column-end: 2;
-    margin-left: 20px;
+    grid-column-end: 1;
+    padding: 0 20px 0 20px;
+    text-align: center;
   }
 
   .aboutSlider {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 1;
   }
 
   .aboutTitle {

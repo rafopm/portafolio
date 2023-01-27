@@ -2,15 +2,15 @@ import React from "react";
 import InfiniteLoopSlider from "../components/infinityloop/InfiniteLoopSlider";
 import "../styles/About.css";
 
-const COLORS = [
-  "#bbf7d0",
-  "#99f6e4",
-  "#bfdbfe",
-  "#ddd6fe",
-  "#f5d0fe",
-  "#fed7aa",
-  "#fee2e2",
-];
+// const COLORS = [
+//   "#bbf7d0",
+//   "#99f6e4",
+//   "#bfdbfe",
+//   "#ddd6fe",
+//   "#f5d0fe",
+//   "#fed7aa",
+//   "#fee2e2",
+// ];
 const TAGS = [
   "HTML",
   "CSS",
@@ -44,7 +44,7 @@ function AboutPage() {
         <div className="aboutContenedor">
           <div className="aboutDescription">
             <p>
-              Soy desarrollador de aplicaciones web. Me apasiona solucionar
+              Soy Programador Web. Me apasiona solucionar
               problemas y trabajar con datos.
             </p>
             <p>
