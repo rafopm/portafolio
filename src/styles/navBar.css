@@ -61,7 +61,7 @@
   -o-transition: all .10s ease;
   transition: all .10s ease;
 }
-
+ 
  
 .nav_items a:hover {
   background-color: rgba(255,255,255,0.1);

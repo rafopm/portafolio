@@ -121,16 +121,6 @@
   flex-wrap: nowrap;
 }
 
-.sliderTitle {
-  font-size: 60px;
-  font-weight: 700;
-  position: absolute;
-
-  color: #00cfef;
-  /* color: rgb(188, 222, 251); */
-  font-family: "Dancing Script", cursive;
-  z-index: 7;
-}
 
 .sliderSubTitle {
   font-size: 30px;

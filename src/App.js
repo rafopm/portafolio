@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <Timer />
+     
       <NavBar />
       <Slider />
       <AboutPage />

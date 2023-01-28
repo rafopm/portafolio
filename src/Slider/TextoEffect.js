@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./Slider.css";
+import "./TextoEffect.css";
+import avatar from '../images/avatar.svg'
 
 const TextoEffect = ({ value }) => {
   const [newTexto, setNewTexto] = useState("");
@@ -37,7 +39,15 @@ const TextoEffect = ({ value }) => {
     return () => clearInterval(intervalo);
   }, [newValue]);
 
-  return <div className="sliderTitle">{newTexto}</div>;
+  return (
+    <div>
+      <div className="chat">
+        <div ><img className="avatar" src={avatar} /></div>
+        <div className="txtAnimado">{newTexto}<span className="parpadea text">_</span></div>
+        
+      </div>
+    </div>
+  );
 };
 
 export default TextoEffect;

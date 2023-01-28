@@ -13,7 +13,7 @@ const NavBar = () => {
 
     window.addEventListener("scroll", function (e) {
       setPosition(window.pageYOffset);
-    });
+    }); 
 
     if (position === 0) {
       div.style.visibility = "hidden";

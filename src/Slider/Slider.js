@@ -11,21 +11,11 @@ export default function Slider() {
 
   const [slideIndex, setSlideIndex] = useState(1);
 
-  // repetir con el intervalo de 2 segundos
-  let i = 0;
-  const timerId = setInterval(() => (i++), 10);
-
-  // después de 5 segundos parar
-  setTimeout(() => {
-    clearInterval(timerId);
-
-  }, 1000);
 
   const nextSlide = () => {
     if (slideIndex !== dataSlider.length) {
       setSlideIndex(slideIndex + 1);
 
-      slideImg.current.style.opacity = "0.1";
     } else if (slideIndex === dataSlider.length) {
       setSlideIndex(1);
     }
@@ -60,24 +50,22 @@ export default function Slider() {
   return (
     <>
       <div className="container-slider" ref={slideshow}>
-        <div className="backMensaje">
+        
           <TextoEffect value={dataSlider[slideIndex - 1].title}></TextoEffect>
-        </div>
-        <div ref={slideImg}>
           <img
             className="imageSlider"
             src={require(`../Slider/img/${
               dataSlider[slideIndex - 1].image
-            }.jpg`)}
+            }.png`)}
           />
-          <img
+          {/* <img
             className="subImageSlider"
             src={require(`../Slider/img/${
               dataSlider[slideIndex - 1].subimage
             }.svg`)}
             alt="Imágenes de bienvenida"
-          />
-        </div>
+          /> */}
+        
         <BtnSlider moveSlide={nextSlide} direction={"next"} />
         <BtnSlider moveSlide={prevSlide} direction={"prev"} />
       </div>
