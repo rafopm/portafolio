@@ -21,7 +21,7 @@ const NavBar = () => {
       div.style.visibility = "";
     }
   }, [position]);
-
+ 
   return (
     <div
       id={styles["nav"]}

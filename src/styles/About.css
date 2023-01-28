@@ -13,23 +13,23 @@
 
 .aboutTitle {
   font-size: 2.5em;
-  margin: 10px 0 0 5px;
+  margin: 10px 0 0 0px;
   margin-bottom: -30px;
   text-align: center;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
- 
+
 .aboutTitle p {
   color: #ffffff;
   padding: 0 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-top: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
 }
-
 
 .aboutDescription {
   position: relative;
@@ -37,14 +37,17 @@
   grid-column-end: 1;
   margin: 5px;
   font-size: 1.1em;
-  width: 95%;
+  width: 90%;
   text-overflow: unset;
-  margin: auto;
 }
 
 .aboutSlider {
   grid-column-start: 2;
   grid-column-end: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 90%;
 }
 
 .tag-list {
@@ -113,9 +116,8 @@
 @media screen and (max-width: 768px) {
   .aboutContenedor {
     grid-template-columns: 1fr;
-   width: 95%;
-   margin: auto;
-
+    width: 90%;
+    margin: auto;
   }
 
   .aboutDescription {
@@ -130,7 +132,4 @@
     grid-column-end: 1;
   }
 
-  .aboutTitle {
-    margin-left: 20px;
-  }
 }
