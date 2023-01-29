@@ -10,7 +10,7 @@ import "../styles/About.css";
 //   "#f5d0fe",
 //   "#fed7aa",
 //   "#fee2e2",
-// ];
+// ]; 
 const TAGS = [
   "HTML",
   "CSS",

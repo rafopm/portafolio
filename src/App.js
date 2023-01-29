@@ -7,12 +7,12 @@ import WorkList from "./components/portafolio/WorkList";
 import FooterPage from "./pages/FooterPage";
 import Timer from "./components/Timer";
 
-
 function App() {
-
   return (
     <div>
-     
+      <div id="stars"></div>
+      <div id="stars2"></div>
+
       <NavBar />
       <Slider />
       <AboutPage />

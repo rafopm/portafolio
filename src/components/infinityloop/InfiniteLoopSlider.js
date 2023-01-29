@@ -2,6 +2,7 @@ import React from 'react'
 import './infiniteLoopSlider.css'
 
 const InfiniteLoopSlider = ({children, duration, reverse = false}) => {
+  
     return (
         <div className='loop-slider' style={{
             '--duration': `${duration}ms`,

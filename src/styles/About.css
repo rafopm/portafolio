@@ -10,7 +10,7 @@
   margin: auto;
   user-select: none;
 }
-
+ 
 .aboutTitle {
   font-size: 2.5em;
   margin: 10px 0 0 0px;
@@ -113,6 +113,8 @@
   }
 }
 
+
+/* *************** ************************/
 @media screen and (max-width: 768px) {
   .aboutContenedor {
     grid-template-columns: 1fr;
