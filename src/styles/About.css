@@ -72,6 +72,7 @@
   animation-duration: var(--duration);
 }
 
+
 .tag {
   display: flex;
   align-items: center;
@@ -112,8 +113,8 @@
     transform: translateX(-50%);
   }
 }
-
-
+ 
+ 
 /* *************** ************************/
 @media screen and (max-width: 768px) {
   .aboutContenedor {
