@@ -12,7 +12,8 @@ function Work({ imageSource, title, text, url, category, tools }) {
             <h2>{category}</h2>
             <p>Herramientas: </p>
             <h4>{tools}</h4>
-            <p>Ir a la web de: </p>
+            <br /><br />
+            {/* <p>Ir a la web de: </p> */}
             <h4>
             <a
               href={url ? url : "#!"}
@@ -20,7 +21,7 @@ function Work({ imageSource, title, text, url, category, tools }) {
               className="btn"
               rel="noreferrer"
             >
-               {title}
+               DEMO
             </a>
             </h4>
           </div>

@@ -4,6 +4,8 @@ import Work from "./Work";
 import image1 from "../../images/work/image1.png";
 import image2 from "../../images/work/image2.png";
 import image3 from "../../images/work/image3.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 const works = [
   {
@@ -42,7 +44,7 @@ function WorkList() {
         <br /> 
       </div>
       <div className="workTitle">
-          <p>PORTAFOLIO</p>
+          <p><FontAwesomeIcon icon={faBriefcase} style={{color: "#00cfef", opacity: ".4"}} />  PORTAFOLIO</p>
         </div>
       <div className="containerWork">
 

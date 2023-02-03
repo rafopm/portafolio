@@ -1,6 +1,8 @@
 import React from "react";
 import InfiniteLoopSlider from "../components/infinityloop/InfiniteLoopSlider";
 import "../styles/About.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 
 // const COLORS = [
 //   "#bbf7d0",
@@ -39,7 +41,7 @@ function AboutPage() {
       <br />
       <div >
         <div className="aboutTitle">
-          <p> ACERCA DE MI </p>
+          <p><FontAwesomeIcon icon={faIdCard} style={{color: "#00cfef", opacity: ".4"}} /> ACERCA DE MI </p>
         </div>
         <div className="aboutContenedor">
           <div className="aboutDescription">

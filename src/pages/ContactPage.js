@@ -5,6 +5,8 @@ import emailjs from "@emailjs/browser";
 import Reaptcha, { Props as ReaptchaProps } from "reaptcha";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
+
 import ContactImage from "../images/contact.svg";
 import Modal from "../components/modal/ModalCore";
 
@@ -57,7 +59,7 @@ export default function ContactPage() {
     <div id="idContacto" >
       <br />
       <div className="contactTitle">
-        <p>CONTACTO</p>
+        <p><FontAwesomeIcon icon={faMessage} style={{color: "#00cfef", opacity: ".4"}} /> CONTACTO</p>
       </div>
       <div className="contactContenedor">
         <div className="contactDescription">
